@@ -21,6 +21,30 @@ set autowrite     " Automatically :write before running commands
 set hlsearch
 "set noballooneval " Hide code evaluation tooltips
 
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim/
+call vundle#begin()
+
+" Let Vundle manage Vundle
+Bundle 'gmarik/Vundle.vim'
+
+" Define bundles via Github repos
+Bundle 'ctrlpvim/ctrlp.vim'
+Bundle 'janko-m/vim-test'
+Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-commentary'
+Bundle 'cohama/lexima.vim'
+Bundle 'christoomey/vim-titlecase'
+Bundle 'urso/haskell_syntax.vim'
+Bundle 'elixir-lang/vim-elixir'
+Bundle 'chrisbra/Colorizer'
+Bundle 'slashmili/alchemist.vim'
+Bundle 'joshdick/onedark.vim'
+Bundle 'sheerun/vim-polyglot'
+
+call vundle#end()
+filetype on
+
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
 if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
@@ -90,10 +114,8 @@ if executable('ag')
 endif
 
 " Color scheme
-set background=dark " for the dark version
-colorscheme one
-highlight NonText ctermbg=0 cterm=NONE gui=NONE
-highlight Folded  guibg=#0A0A0A guifg=#9090D0
+syntax on
+colorscheme onedark
 
 set guifont=Inconsolata:h14.00 "best font ever
 
@@ -193,29 +215,6 @@ set diffopt+=vertical
 if filereadable($HOME . "/.vimrc.local")
   source ~/.vimrc.local
 endif
-
-
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim/
-call vundle#begin()
-
-" Let Vundle manage Vundle
-Bundle 'gmarik/Vundle.vim'
-
-" Define bundles via Github repos
-Bundle 'ctrlpvim/ctrlp.vim'
-Bundle 'janko-m/vim-test'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-commentary'
-Bundle 'cohama/lexima.vim'
-Bundle 'christoomey/vim-titlecase'
-Bundle 'urso/haskell_syntax.vim'
-Bundle 'elixir-lang/vim-elixir'
-Bundle 'chrisbra/Colorizer'
-Bundle 'slashmili/alchemist.vim'
-
-call vundle#end()
-filetype on
 
 " a new operator to titlecase text
 let g:titlecase_map_keys = 0
