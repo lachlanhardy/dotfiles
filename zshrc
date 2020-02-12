@@ -99,3 +99,6 @@ PS1="%~ \$(parse_git_branch)\$ "
 HEROKU_AC_ZSH_SETUP_PATH=/Users/ems/Library/Caches/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
 
 . /usr/local/etc/profile.d/z.sh
+
+export PATH="$(brew --prefix qt@5.5)/bin:$PATH"
+export PATH="/usr/local/opt/ncurses/bin:$PATH"
