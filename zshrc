@@ -60,6 +60,14 @@ source /usr/local/share/chruby/auto.sh
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
+ZSH_THEME="avit"
+
+plugins=(
+  git
+  zsh-autosuggestions
+  zsh-syntax-highlighting
+)
+
 # Initialise colours
 autoload -U colors
 colors
