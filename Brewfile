@@ -7,6 +7,7 @@ brew "ruby-install"
 brew "sqlite"
 brew "the_silver_searcher"
 brew "yarn"
+brew "zsh"
 
 tap "heroku/brew"
 brew "heroku"
