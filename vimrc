@@ -29,18 +29,20 @@ call vundle#begin()
 Bundle 'gmarik/Vundle.vim'
 
 " Define bundles via Github repos
-Bundle 'ctrlpvim/ctrlp.vim'
-Bundle 'janko-m/vim-test'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-commentary'
-Bundle 'cohama/lexima.vim'
-Bundle 'christoomey/vim-titlecase'
-Bundle 'urso/haskell_syntax.vim'
-Bundle 'elixir-lang/vim-elixir'
 Bundle 'chrisbra/Colorizer'
-Bundle 'slashmili/alchemist.vim'
+Bundle 'christoomey/vim-titlecase'
+Bundle 'cohama/lexima.vim'
+Bundle 'ctrlpvim/ctrlp.vim'
+Bundle 'dense-analysis/ale'
+Bundle 'elixir-lang/vim-elixir'
+Bundle 'janko-m/vim-test'
 Bundle 'joshdick/onedark.vim'
+Bundle 'preservim/nerdtree'
 Bundle 'sheerun/vim-polyglot'
+Bundle 'slashmili/alchemist.vim'
+Bundle 'tpope/vim-commentary'
+Bundle 'tpope/vim-surround'
+Bundle 'urso/haskell_syntax.vim'
 
 call vundle#end()
 filetype on
@@ -117,7 +119,7 @@ endif
 syntax on
 colorscheme onedark
 
-set guifont=Inconsolata:h14.00 "best font ever
+"set guifont=Inconsolata:h14.00 "best font ever
 
 " Make it obvious where 80 characters is
 set textwidth=80
@@ -175,6 +177,8 @@ map <leader>es :sp <C-R>=expand("%:p:h") . "/" <CR>
 map <leader>ev :vsp <C-R>=expand("%:p:h") . "/" <CR>
 map <leader>et :tabe <C-R>=expand("%:p:h") . "/" <CR>
 
+" Toggle NERDTree
+map <C-n> :NERDTreeToggle<CR>
 " Use the os_x_iterm2 runner
 let g:rspec_runner = 'os_x_iterm'
 
@@ -239,5 +243,14 @@ map <leader><space> :!mix test<CR>
 " turn colorizer on for specific file types, but not in comments
 let g:colorizer_auto_filetype='css,html'
 let g:colorizer_skip_comments = 1
+
+" configure ALE
+let g:ale_sign_error = '❌'
+let g:ale_sign_warning = '⚠️'
+
+let g:ale_fixers = {'javascript': ['eslint']}
+
+" Fix files automatically on save
+let g:ale_fix_on_save = 1
 
 set exrc

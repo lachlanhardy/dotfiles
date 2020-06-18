@@ -57,3 +57,5 @@
   autosquash = true
 [diff]
 	noprefix = true
+[url "https://:@github.com"]
+	insteadOf = https://github.com
