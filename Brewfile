@@ -13,6 +13,8 @@ brew "ruby-install"
 brew "sqlite"
 brew "the_silver_searcher"
 brew "yarn"
+brew "z"
+brew "zsh"
 
 cask "appcleaner"
 cask "keepingyouawake"
