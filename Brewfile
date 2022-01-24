@@ -21,6 +21,7 @@ cask "keepingyouawake"
 cask "macdown"
 cask "signal"
 cask "skype"
+cask "slack"
 cask "spotify"
 cask "warp"
 
