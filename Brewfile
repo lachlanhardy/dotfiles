@@ -8,7 +8,7 @@ brew "macvim"
 brew "mas"
 brew "node"
 brew "openssl@1.1"
-brew "postgresql"
+brew "postgresql", restart_service: :changed
 brew "ruby-install"
 brew "sqlite"
 brew "the_silver_searcher"
