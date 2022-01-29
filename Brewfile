@@ -17,15 +17,21 @@ brew "z"
 brew "zsh"
 
 cask "appcleaner"
+cask "deckset"
 cask "keepingyouawake"
+cask "linear"
 cask "macdown"
 cask "odrive"
 cask "signal"
 cask "skype"
-cask "slack"
 cask "spotify"
 cask "warp"
 
 mas "1Password 7", id: 1333542190
+mas "Adblock for Safari", id: 1018301773
 mas "Kindle", id: 405399194
+mas "Meeter", id: 1510445899
+mas "Newton", id: 1059655371
+mas "Push to Kindle", id: 1548529953
+mas "Slack for Desktop", id: 803453959
 mas "Todoist", id: 585829637
